@@ -1,0 +1,88 @@
+<!-- [Design Purpose] 
+
+1) Theme: “Music for relaxation / study”
+2) Concept: The mood of a calm late-night study session on a rainy day.
+3) Layout : Minimal layout that avoids distractions -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Peaceful Late Night Study</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="stage">
+      <!-- Title -->
+      <section class="left">
+        <h1>Peaceful Late night study.</h1>
+        <p class="sub">FOCUS &amp; RELAX</p>
+
+        <!-- Cloud btn (rain on/off) -->
+        <button
+          id="cloudBtn"
+          class="cloud"
+          aria-pressed="false"
+          aria-label="Toggle rain"
+        >
+          <img src="assets/cloud.blue.png" alt="Rain toggle cloud" />
+        </button>
+      </section>
+
+      <!-- Card -->
+      <section class="right card" aria-label="music player">
+        <div class="content">
+          <!-- 1) Image -->
+          <div class="cover">
+            <img src="assets/Study_room.jpg" alt="Player visual" />
+          </div>
+
+          <!-- 2) Buttons -->
+          <div class="btns">
+            <button id="playBtn" class="btn primary">PLAY</button>
+            <button id="stopBtn" class="btn">STOP</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Audio -->
+    <audio
+      id="music"
+      src="assets/erokia_ambient-wave-56-msfxp7-78.mp3"
+      preload="metadata"
+      loop
+    ></audio>
+    <audio
+      id="rain"
+      src="assets/light-rain-109591.mp3"
+      preload="auto"
+      loop
+    ></audio>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <small>© 2025 huihyunkim Study Room</small>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+
+<!--
+[References / Sources]  
+Image: Photo by Aman Pal on Unsplash (Free to use, no permission needed), https://unsplash.com/photos/Y6jaujuMxvw  
+Visual reference: *Lo-Fi Radio Motion Graphics* by MIHAO on Dribbble, https://dribbble.com/shots/23210511-Lo-Fi-Radio-Motion-Graphics  
+Font: *Marcellus* from Google Fonts  
+Cloud.png: Created by myself with Illustrator!  
+Music track: Provided in Canvas  
+Rain sound: Sound Effect *Light Rain* by LIECIO from Pixabay, https://pixabay.com/sound-effects/search/rain/
+-->

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mood Lab</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/kfh5onw.css" />
+  </head>
+
+  <body data-state="default" data-theme="">
+    <div class="ambient" aria-hidden="true"></div>
+    <div class="ripple-field" aria-hidden="true"></div>
+
+    <h1 class="title">CIRCLE OF EMOTIONS</h1>
+
+    <main class="stage" aria-label="Mood selector">
+      <button class="dot" data-mood="peace" aria-label="Peace"></button>
+      <button class="dot" data-mood="anger" aria-label="Anger"></button>
+      <button class="dot" data-mood="blue" aria-label="Feeling Blue"></button>
+    </main>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
+
+<!--
+
+Project: Circle of Emotions  
+Author: s4032064 Huihyun Kim  
+
+
+[Design Intention]
+
+“Circle of Emotions” is an interactive digital prototype that visually explores 
+emotional states through color and motion. Three circles are placed at the 
+center of the screen, each representing PEACE, ANGER, and FEELING BLUE.  
+When a user clicks a circle, the background and animation transition to express 
+the selected mood, allowing the viewer to feel and interpret emotions through 
+visual change.
+
+Before interaction begins, hovering over each circle reveals a soft glowing 
+outline in its respective emotional color. This subtle cue invites curiosity 
+and encourages users to explore before committing to an emotion.
+
+PEACE uses warm yellow tones and a gentle ripple animation to visualize calm 
+and serenity. ANGER is expressed through deep wine-red gradients and a 
+swirling, restless motion that conveys inner turbulence, while FEELING BLUE 
+is represented by slow vertical movement and muted cool hues that evoke 
+a sense of melancholy.
+
+
+[Code Structure]
+
+1. HTML — Defines the base structure including the title, three emotion circles, 
+   and ambient background layers.
+
+2. CSS — Controls color palettes, layout, animations, and transitions for each 
+   emotional state (PEACE, ANGER, BLUE). The attribute `body[data-state]` is used 
+   to dynamically switch visual themes.
+
+3. JavaScript — Manages user interaction logic:
+   - `setActive()`: Highlights the clicked circle and dims the others.  
+   - `setTheme()`: Updates the body’s data attribute to trigger theme changes in CSS.  
+   - `updateActiveCenter()`: Calculates the center coordinates of the selected circle 
+      (used for ripple animation placement).  
+   - `spawnRing()`: Creates and animates expanding ripple rings.  
+   - `startPeaceLoop()` / `stopPeaceLoop()`: Controls continuous ripple generation 
+      in PEACE mode only.  
+   - `setMood()`: Handles the transition between emotional states and triggers related animations.  
+   - Event Binding: Each `.dot` element listens for clicks to activate the mood transition.
+
+
+[Benefits] 
+ 
+1) Multisensory Expansion: Integrating sound or haptic feedback could deepen 
+  the immersive quality of emotional expression.  
+
+2) Scalability of Emotion: Additional emotion circles could be introduced, 
+  allowing users’ selections to be recorded over time and visualized as an 
+  “Emotional Map” — a timeline of shifting moods and emotional flow.
+
+[Challenges]
+
+1) Accessibility: Since emotions are expressed primarily through color and motion, 
+  the experience may be less accessible to users with visual or perceptual limitations. 
+   
+2) Subjective Interpretation: Emotional visuals can be interpreted differently 
+  depending on personal or cultural context, making it difficult to establish 
+  a universally shared “visual language of emotion.”
+
+  Ultimately, “Circle of Emotions” is an exploration of how subtle movements and 
+color transitions can communicate emotion without relying on complex interfaces.  
+It experiments with emotional expression through visual language — where the act 
+of transition itself becomes the emotional experience.
+
+[Reflection]  
+
+During this project, I faced several challenges while translating my visual ideas 
+from the wireframe stage into real interaction. In particular, it was difficult 
+to make the *ANGER* motion feel as strong and expressive as I initially imagined.  
+Expressing intense emotion through rhythm and motion turned out to be both 
+technically and aesthetically demanding.
+
+I initially aimed to create a visually striking prototype, 
+but I realized how important it is to bridge the gap between ideation and implementation. 
+Moving forward, I aim to consider not only the concept itself but also the structural 
+and technical aspects of motion design.
+
+-->
